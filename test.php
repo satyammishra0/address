@@ -88,5 +88,20 @@ echo "Current population of " . $country . " is " .  $res->count;
 
 curl_close($curl);
 
+// Objects in PHP
 
-echo "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";
+class mobile
+{
+
+    public $model;
+
+    function showModel()
+    {
+        echo "<br>Model No :$this->model";
+    }
+}
+
+// -> is used to access class member using obj
+$samsung = new mobile;
+$samsung->model = 'a8';
+$samsung->showModel();
