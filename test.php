@@ -105,3 +105,103 @@ class mobile
 $samsung = new mobile;
 $samsung->model = 'a8';
 $samsung->showModel();
+
+
+
+
+<html>
+
+<head>
+    <!-- <link rel="stylesheet" media="all" href="/style.css" /> -->
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css" />
+    <!-- <script src="/validation.js" async defer crossorigin="anonymous"></script> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h2>Javascript Validation Form</h2>
+        </div>
+        <!-- <form id="form" class="form">
+            <div class="form-control">
+                <input type="text" placeholder="username" id="username" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <input type="email" placeholder="Email" id="email" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Password" id="password" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <div class="form-control">
+                <input type="password" placeholder="Confirm Password" id="cnfpassword" />
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+            <button id="submit">Submit</button>
+        </form> -->
+
+        <button id="fetch-btn">Fetch data</button>
+        <button id="backup-btn">backup data</button>
+
+    </div>
+
+    <script src="ajax.js"></script>
+</body>
+
+</html>
+
+
+<?php
+
+$format = "";
+echo  "toady is " . date("dS") . "<br>";
+echo "month is " . date('F') . "<br>";
+echo "month is " . date('M') . "<br>";
+
+echo "date is " . date('d/M/Y') . "<br>";
+
+echo "Week day" . date('D') . "<br>";
+
+
+$name = "John";
+echo "Hello, $name!";
+
+$name = "John";
+echo 'Hello, $name!';
+
+
+
+function isPrime($num)
+{
+    // check if the number is less than 2
+    if ($num < 2) {
+        return false;
+    }
+    // loop through all numbers from 2 to sqrt($num)
+    for ($i = 2; $i <= sqrt($num); $i++) {
+        // if $num is divisible by $i, it's not a prime number
+        if ($num % $i == 0) {
+            return false;
+        }
+    }
+    // if the loop completes, $num is a prime number
+    return true;
+}
+
+// find all prime numbers between 1 and 100
+for ($i = 1; $i <= 100; $i++) {
+    if (isPrime($i)) {
+        echo "<br>" . $i . " ";
+    }
+}
+?>
